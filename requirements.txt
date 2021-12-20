@@ -1,2 +1,6 @@
 pandas
 ipywidgets
+neuron
+jupyter
+scipy
+matplotlib
