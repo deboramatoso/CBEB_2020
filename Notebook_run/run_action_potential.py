@@ -228,6 +228,6 @@ axarr4.grid()
 axarr5.grid()
 
 
-pyplot.tight_layout(0.1)
+pyplot.tight_layout()
 
 pyplot.savefig('action_potential.png')
