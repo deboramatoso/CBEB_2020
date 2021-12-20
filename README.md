@@ -28,7 +28,7 @@ Follow the link that will be prompted on the screen.
 
 ## Using MyBinder environment
 
-The notebook can also be accessed on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deboramatoso/mnpynotebook/master).
+The notebook can also be accessed on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deboramatoso/MNPyNotebook/binder?labpath=Notebook_run%2FMNPyNotebook.ipynb).
 
 ## Using the interactive notebook
 
