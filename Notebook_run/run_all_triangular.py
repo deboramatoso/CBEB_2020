@@ -146,7 +146,7 @@ axarr[0].tick_params(labelsize=15)
 axarr[1].tick_params(labelsize=15)
 axarr[2].tick_params(labelsize=15)
 axarr[3].tick_params(labelsize=15)
-pyplot.tight_layout(rect=(0,0,1,.98))
+pyplot.tight_layout()
 
 if len(freq)==0:
    frequency = 0
