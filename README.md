@@ -32,7 +32,7 @@ Follow the link that will be prompted on the screen.
 
 ## Using the interactive notebook
 
-Once you enter the Jupyter environment, select the folder "Notebook_run" and run the script (**MNPyNotebook.ipynb**). If you want to use the notebook with the MyBinder environment, uncomment the line `!nrnivmodl` to compile the Neuron mechanisms.
+Once you enter the Jupyter environment, select the folder "Notebook_run" and run the script (**MNPyNotebook.ipynb**). If you want to use the notebook with the MyBinder environment the notebook will automatically open.
 
 You will get the model outputs after clicking on "Run interact" buttons. You can modify model and input parameters with the widgets to observe other scenarios. Please, feel free to explore the tool at your leisure.
 
