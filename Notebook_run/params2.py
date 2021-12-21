@@ -1,10 +1,11 @@
 import os
-if 'DISPLAY' in os.environ:
-    del os.environ['DISPLAY']
+import subprocess
 import sys
-sys.path.insert(0, '/usr/local/nrn/lib/python/')
 from IPython.display import display, Image, clear_output
 
+if 'DISPLAY' in os.environ:
+    del os.environ['DISPLAY']
+sys.path.insert(0, '/usr/local/nrn/lib/python/')
 
 class params_init(object):
     
@@ -27,20 +28,14 @@ class params_init(object):
         self.mutype = 'S'
 
     def params_pulse(self):
-        
-        import subprocess
         #os_out=os.system('ipython run_all_pulse.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.meddur)+' '+str(self.posdur)+' '+str(self.preamp)+' '+str(self.posamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
-      
-    
         #if os_out !=0:
         #    print('ERRO no os.system',os_out)
-        
         subprocess.check_output('ipython run_all_pulse.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.meddur)+' '+str(self.posdur)+' '+str(self.preamp)+' '+str(self.posamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks),stderr=subprocess.STDOUT, shell=True)
         try:
             print(stderr)
         except:
             pass
-        
         display(Image(filename='pulse_injection.png'))
     
     def view_pulse(self,mutype,gama,delay,predur,meddur,posdur,preamp,posamp,ld,diam,gnap,gcal,gks):
@@ -59,15 +54,15 @@ class params_init(object):
         self.mutype = mutype
         self.params_pulse()
         
-
     def params_triangular(self):
-
-
-        os_out=os.system('ipython run_all_triangular.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.posdur)+' '+str(self.posamp)+' '+str(self.possamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
-      
-        if os_out !=0:
-            print('ERRO no os.system',os_out)
-        
+        #os_out=os.system('ipython run_all_triangular.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.posdur)+' '+str(self.posamp)+' '+str(self.possamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
+        #if os_out !=0:
+            #print('ERRO no os.system',os_out)
+        subprocess.check_output('ipython run_all_triangular.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.posdur)+' '+str(self.posamp)+' '+str(self.possamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks),stderr=subprocess.STDOUT, shell=True)
+        try:
+            print(stderr)
+        except:
+            pass
         display(Image(filename='triangular_injection.png'))
      
     def view_triangular(self,mutype,gama,delay,predur,posdur,posamp,possamp,ld,diam,gnap,gcal,gks):
@@ -85,17 +80,16 @@ class params_init(object):
         self.mutype = mutype
         self.params_triangular()
         
-      
     def params_action_potential(self):
-
-        
-        import subprocess
-        
-        os_out=os.system('ipython run_action_potential.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.dur)+' '+str(self.amp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
-      
-        if os_out !=0:
-            print('ERRO no os.system',os_out)
-        
+        import subprocess        
+        #os_out=os.system('ipython run_action_potential.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.dur)+' '+str(self.amp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
+        #if os_out !=0:
+            #print('ERRO no os.system',os_out)
+        subprocess.check_output('ipython run_action_potential.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.dur)+' '+str(self.amp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks),stderr=subprocess.STDOUT, shell=True)
+        try:
+            print(stderr)
+        except:
+            pass
         display(Image(filename='action_potential.png'))
      
     def view_action_potential(self,mutype,gama,delay,dur,amp,ld,diam,gnap,gcal,gks):
@@ -113,21 +107,14 @@ class params_init(object):
         
     def params_inject_current(mode):
         if mode == 'pulse':
-                    
             os_out=os.system('ipython run_all_pulse.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.meddur)+' '+str(self.posdur)+' '+str(self.preamp)+' '+str(self.posamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
-
             if os_out !=0:
                 print('ERRO no os.system',os_out)
-
             display(Image(filename='pulse_injection.png'))
-            
         if mode == 'triangular':
-           
             os_out=os.system('ipython run_all_triangular.py --'+' '+str(self.mutype)+' '+str(self.gama)+' '+str(self.delay)+' ' +str(self.predur)+' '+str(self.posdur)+' '+str(self.posamp)+' '+str(self.possamp)+' '+str(self.ld)+' '+str(self.diam)+' '+str(self.gnap)+' '+str(self.gcal)+' '+str(self.gks))
-
             if os_out !=0:
                 print('ERRO no os.system',os_out)
-
             display(Image(filename='triangular_injection.png'))
      
     def view_current(self,mode):
@@ -165,5 +152,3 @@ class params_init(object):
                 self.params_triangular()
         else: 
             print("Sintaxe error: this current doesn't exist")
-     
-        
