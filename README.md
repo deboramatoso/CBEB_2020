@@ -6,11 +6,11 @@ The Jupyter notebook was coded in Python programming language and the libraries 
 
 ## Using MyBinder environment
 
-The notebook can also be accessed on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deboramatoso/MNPyNotebook/binder?labpath=Notebook_run%2FMNPyNotebook.ipynb).
+The notebook can be accessed on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deboramatoso/MNPyNotebook/binder?labpath=Notebook_run%2FMNPyNotebook.ipynb).
 
 ## Using Docker environment
 
-You might use Docker after install Docker on your computer. Please, follow the [instructions](https://docs.docker.com/engine/install/) presented at the Docker website.
+You also might use Docker after installing it on your computer. Please, follow the [instructions](https://docs.docker.com/engine/install/) presented at the Docker website.
 
 
 ### Running on your own computer
