@@ -88,7 +88,7 @@ def widget_interact_manual_current(mode):
                         description='Ascending phase duration [$ms$]:', 
                         layout = Layout(width= '400px'), style = style)
 
-        posdur= FloatSlider(value = 11250, min = 0, max = 12000,
+        posdur= FloatSlider(value = 5000, min = 0, max = 6000,
                         description='Descending phase duration [$ms$]:', 
                         layout = Layout(width= '400px'), style = style)
 
