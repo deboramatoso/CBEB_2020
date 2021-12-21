@@ -144,7 +144,7 @@ axarr[2].set_ylabel('Current (nA)',rotation=90)
 axarr[2].grid()
 
 pyplot.xlabel('Time (ms)')
-pyplot.tight_layout(0.1)
+pyplot.tight_layout()
 
 spikes=len(spikes)
 import pandas as pd

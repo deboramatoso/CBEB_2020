@@ -138,15 +138,15 @@ axarr[0].set_xlabel('Current (nA)',fontsize=15)
 axarr[3].set_xlabel('Time (ms)', fontsize = 15)
 
 
-axarr[0].grid(b=True)
-axarr[1].grid(b=True)
-axarr[2].grid(b=True)
-axarr[3].grid(b=True)
+axarr[0].grid(visible=True)
+axarr[1].grid(visible=True)
+axarr[2].grid(visible=True)
+axarr[3].grid(visible=True)
 axarr[0].tick_params(labelsize=15)
 axarr[1].tick_params(labelsize=15)
 axarr[2].tick_params(labelsize=15)
 axarr[3].tick_params(labelsize=15)
-pyplot.tight_layout(rect=(0,0,1,.98))
+pyplot.tight_layout()
 
 if len(freq)==0:
    frequency = 0

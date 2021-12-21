@@ -4,9 +4,13 @@
 
 The Jupyter notebook was coded in Python programming language and the libraries of the NEURON simulator. The environment can be easily set up on [Docker](https://www.docker.com/) or [MyBinder](https://mybinder.org/).
 
+## Using MyBinder environment
+
+The notebook can be accessed on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deboramatoso/MNPyNotebook/binder?labpath=Notebook_run%2FMNPyNotebook.ipynb).
+
 ## Using Docker environment
 
-You might use Docker after install Docker on your computer. Please, follow the [instructions](https://docs.docker.com/engine/install/) presented at the Docker website.
+You also might use Docker after installing it on your computer. Please, follow the [instructions](https://docs.docker.com/engine/install/) presented at the Docker website.
 
 
 ### Running on your own computer
@@ -25,10 +29,6 @@ $ sudo docker run -it -p 8888:8888 28102018/decm_first_repo:mnpynotebook_v03
 
 Follow the link that will be prompted on the screen.
 
-
-## Using MyBinder environment
-
-The notebook can also be accessed on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deboramatoso/mnpynotebook/master).
 
 ## Using the interactive notebook
 
